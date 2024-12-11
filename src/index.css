@@ -182,8 +182,15 @@ footer a {
   text-decoration: none;
 }
 
+input:focus, textarea:focus {
+  caret-color: #000000; /* Changes the color of the cursor */
+  color: #000000;
+  text-decoration: none;
+}
+
 footer a:hover {
   text-decoration: underline;
+
 }
 
 /* Form Styles */
@@ -225,10 +232,10 @@ form button:hover {
   }
   
   .circle {
-    position: absolute;
+    position: infinite;
     width: 100px;
     height: 100px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(77, 104, 155);
     border-radius: 50%;
     opacity: 0.7;
     pointer-events: none;

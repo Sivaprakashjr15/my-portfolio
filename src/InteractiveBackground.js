@@ -4,11 +4,11 @@ import { gsap } from 'gsap';
 const InteractiveBackground = () => {
   useEffect(() => {
     const circles = document.querySelectorAll('.circle');
-    
+
     const animateCircles = (e) => {
-      circles.forEach((circle) => {
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
+      const { clientX: mouseX, clientY: mouseY } = e;
+
+      circles.forEach((circle, index) => {
         const rect = circle.getBoundingClientRect();
         const circleX = rect.left + rect.width / 2;
         const circleY = rect.top + rect.height / 2;
@@ -16,29 +16,35 @@ const InteractiveBackground = () => {
         const distX = (mouseX - circleX) * 0.05;
         const distY = (mouseY - circleY) * 0.05;
 
+        // Delay each circle slightly for a smooth trailing effect
         gsap.to(circle, {
           x: distX,
           y: distY,
-          duration: 0.3,
+          duration: 0.5,
+          delay: index * 0.05,
           ease: 'power3.out',
         });
       });
     };
 
-    window.addEventListener('mousemove', animateCircles);
+    const throttledAnimate = (e) => {
+      requestAnimationFrame(() => animateCircles(e));
+    };
+
+    window.addEventListener('mousemove', throttledAnimate);
 
     return () => {
-      window.removeEventListener('mousemove', animateCircles);
+      window.removeEventListener('mousemove', throttledAnimate);
     };
   }, []);
 
-  return (
-    <div className="circle-container">
-      <div className="circle" />
-      <div className="circle" />
-      <div className="circle" />
-    </div>
-  );
+  const createCircles = (count) => {
+    return Array.from({ length: count }, (_, i) => (
+      <div key={i} className="circle" />
+    ));
+  };
+
+  return <div className="circle-container">{createCircles(5)}</div>;
 };
 
 export default InteractiveBackground;
