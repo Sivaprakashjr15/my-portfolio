@@ -232,7 +232,7 @@ form button:hover {
   }
   
   .circle {
-    position: infinite;
+    position: all; 
     width: 100px;
     height: 100px;
     background-color: rgb(77, 104, 155);
@@ -242,6 +242,21 @@ form button:hover {
     transform: translate(-50%, -50%);
     transition: all 0.3s ease-out;
   }
+  
+  @media (max-width: 768px) {
+    .circle {
+      width: 80px; /* Smaller size for mobile */
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .circle {
+      width: 60px; /* Even smaller size for very small screens */
+      height: 60px;
+    }
+  }
+  
   
   /* Media Queries for mobile responsiveness */
   @media (max-width: 768px) {
@@ -259,5 +274,3 @@ form button:hover {
       opacity: 0.4;
     }
   }
-  
-  

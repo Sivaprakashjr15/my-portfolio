@@ -41,11 +41,10 @@ const Header = () => (
 const About = () => (
   <section id="about" className="p-10 bg-gray-100 text-gray-800">
     <h2 className="text-3xl font-bold mb-4">About Me</h2>
-    <p>
-      I'm a passionate developer who's eager to leverage strong technical skills and a passion for innovation to contribute to impactful projects. 
-      Proficient in HTML5, CSS3, Python, Java, Data Analytics, PowerBI, JavaScript, React.js, Node.js, and Solidity. Committed to delivering high-quality solutions through effective problem-solving, strong communication, and collaborative teamwork. 
-      Seeking a challenging role in a dynamic environment to further develop my skills and make a meaningful impact.
-    </p>
+    <p> - 🎓 Currently exploring Blockchain Development and Full Stack Web Development.</p>
+    <p>- 🛠️ Experienced in building decentralized applications using Solidity and React.</p>
+    <p>- 🌱 Constantly learning and enhancing my knowledge in Web3 technologies.</p>
+    <p>- 🔭 Actively seeking opportunities in entry-level roles where I can contribute and grow in team-oriented environments.</p>
   </section>
 );
 
@@ -95,7 +94,7 @@ const Footer = () => (
 
 // App Component
 const App = () => {
-  const skills = ['React.js', 'Node.js', 'JavaScript', 'Python'];
+  const skills = ['React.js', 'Node.js', 'JavaScript', 'Python', 'Java'];
   const projects = [
     {
       title: 'Permissionless Decentralised Crowd- Funding',
