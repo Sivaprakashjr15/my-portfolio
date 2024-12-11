@@ -98,15 +98,15 @@ const App = () => {
   const skills = ['React.js', 'Node.js', 'JavaScript', 'Python'];
   const projects = [
     {
-      title: 'Project 1',
+      title: 'Permissionless Decentralised Crowd- Funding',
       description:
-        'A description of your project showcasing skills in React.js and Node.js.',
-      link: '#',
+        'BetterFund : Crowdfunding Platform Powered by Ethereum Blockchain.',
+      link: 'https://github.com/Sivaprakashjr15/Easy-Raise.git',
     },
     {
-      title: 'Project 2',
-      description: 'Another amazing project description.',
-      link: '#',
+      title: 'Decentralised social media application (dApp)',
+      description: 'dApp: Decentralized Social Media Platform on Polygon.',
+      link: 'https://github.com/Sivaprakashjr15/MySKCT.git',
     },
   ];
 
