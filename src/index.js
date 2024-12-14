@@ -57,7 +57,7 @@ const Header = () => (
         href="https://github.com/sivaprakashjr15"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-black-400 rounded hover:text-blue-500"
+        className="text-black-400 rounded-lg hover:text-blue-500"
       >
         <FaGithub size={30} />
       </a>
