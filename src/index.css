@@ -85,18 +85,19 @@ section#about {
   color: #2d3748; /* Tailwind gray-800 */
 }
 
+section#education {
+  background-color: #edf2f7; /* Tailwind gray-100 */
+  color: #2d3748; /* Tailwind gray-800 */
+}
+
 section#skills {
-  background-color: #edf2f7; /* Tailwind gray-200 */
+  background-color: #f7fafc; /* Tailwind gray-200 */
 }
 
 section#projects {
-  background-color: #f7fafc; /* Tailwind gray-100 */
+  background-color: #edf2f7; /* Tailwind gray-100 */
 }
 
-section#contact {
-  background-color: #2d3748; /* Tailwind gray-800 */
-  color: white;
-}
 
 section h2 {
   font-size: 2rem;
@@ -232,9 +233,9 @@ form button:hover {
   }
   
   .circle {
-    position: all; 
-    width: 100px;
-    height: 100px;
+    position: infinite;
+    width: 50px;
+    height: 50px;
     background-color: rgb(77, 104, 155);
     border-radius: 50%;
     opacity: 0.7;
@@ -242,6 +243,35 @@ form button:hover {
     transform: translate(-50%, -50%);
     transition: all 0.3s ease-out;
   }
+
+  .glow-text {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 1),
+      rgba(0, 255, 0, 1),
+      rgba(0, 0, 255, 1),
+      rgba(255, 0, 0, 1)
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: breathing-glow 8s linear infinite;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+  }
+  
+  @keyframes breathing-glow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
   
   @media (max-width: 768px) {
     .circle {

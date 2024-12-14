@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import InteractiveBackground from './InteractiveBackground';
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 // Navbar Component
 const Navbar = () => (
   <nav className="flex justify-between p-5 bg-gray-800 text-white">
-    <div className="text-2xl font-bold">Hola Amigos</div>
+    <div className="text-2xl font-bold"><span className="glow-text">Hola Amigos'</span></div>
     <div className="flex space-x-4">
-      {['About', 'Skills', 'Projects'].map((item) => (
+      {['About', 'Education', 'Skills', 'Projects'].map((item) => (
         <a
           key={item}
           href={`#${item.toLowerCase()}`}
@@ -24,9 +25,9 @@ const Navbar = () => (
 // Header Component
 const Header = () => (
   <header className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white px-4 sm:px-8">
-    <h1 className="text-3xl sm:text-5xl font-bold mb-4">Hi, I'm SivaprakasamC.</h1>
+    <h1 className="text-3xl sm:text-5xl font-bold mb-4">Hi, I'm <span className="glow-text">SivaprakasamC.</span></h1>
     <p className="text-lg sm:text-xl mb-6">
-      Web Developer | React.js | Node.js | Bridging Front-End and Back-End
+      Web Developer | Bridging Front-End and Back-End
     </p>
     <a
       href="#projects"
@@ -34,6 +35,33 @@ const Header = () => (
     >
       View My Work
     </a>
+    {/* Social Media Icons */}
+    <div className="flex space-x-6 mt-6">
+      <a
+        href="https://twitter.com/SivaprakashTwt"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black-400 rounded-lg hover:text-blue-500"
+      >
+        <FaTwitter size={30} />
+      </a>
+      <a
+        href="https://linkedin.com/in/sivaprakasam-civashankar"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black-400 rounded-lg hover:text-blue-500"
+      >
+        <FaLinkedin size={30} />
+      </a>
+      <a
+        href="https://github.com/sivaprakashjr15"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black-400 rounded hover:text-blue-500"
+      >
+        <FaGithub size={30} />
+      </a>
+    </div>
   </header>
 );
 
@@ -45,6 +73,16 @@ const About = () => (
     <p>- 🛠️ Experienced in building decentralized applications using Solidity and React.</p>
     <p>- 🌱 Constantly learning and enhancing my knowledge in Web3 technologies.</p>
     <p>- 🔭 Actively seeking opportunities in entry-level roles where I can contribute and grow in team-oriented environments.</p>
+  </section>
+);
+
+// Education Component
+const Education = () => (
+  <section id="education" className="p-10 bg-gray-100 text-gray-800">
+    <h2 className="text-3xl font-bold mb-4">Education</h2>
+    <p> 🎓 B.E. in Computer Science and Engineering.</p>
+    <p> 📖 Sri Krishna College of Technology</p>
+    <p> 📍 Coimbatore, Tamil Nadu, India</p>
   </section>
 );
 
@@ -88,7 +126,7 @@ const Projects = ({ projects }) => (
 // Footer Component
 const Footer = () => (
   <footer className="p-4 bg-gray-900 text-gray-400 text-center">
-    © 2024 Sjr15. All rights reserved.
+    <p>© 2024 Sjr15. All rights reserved.</p>
   </footer>
 );
 
@@ -115,6 +153,7 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
+      <Education />
       <Skills skills={skills} />
       <Projects projects={projects} />
       <Footer />

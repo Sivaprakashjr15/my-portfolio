@@ -22,7 +22,7 @@ const InteractiveBackground = () => {
           y: distY,
           duration: 0.5,
           delay: index * 0.05,
-          ease: 'power3.out',
+          ease: 'power7.out',
         });
       });
     };
