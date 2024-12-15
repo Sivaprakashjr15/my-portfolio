@@ -272,6 +272,42 @@ form button:hover {
     }
   }
   
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 4s infinite;
+  }
+  
+  .typing-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #00ff00;
+  position: absolute;
+  bottom: 10%; /* Adjust to align with the laptop screen */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff00;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00ff00;
+  }
+}
+
   
   @media (max-width: 768px) {
     .circle {

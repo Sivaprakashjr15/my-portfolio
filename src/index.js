@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { ReactComponent as LaptopMan } from './assets/laptop-man.svg'; // Importing the SVG as a React component
 import InteractiveBackground from './InteractiveBackground';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
@@ -25,7 +26,9 @@ const Navbar = () => (
 // Header Component
 const Header = () => (
   <header className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white px-4 sm:px-8">
-    <h1 className="text-3xl sm:text-5xl font-bold mb-4">Hi, I'm <span className="glow-text">SivaprakasamC.</span></h1>
+    <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+      Hi, I'm <span className="glow-text">SivaprakasamC.</span>
+    </h1>
     <p className="text-lg sm:text-xl mb-6">
       Web Developer | Bridging Front-End and Back-End
     </p>
@@ -35,6 +38,7 @@ const Header = () => (
     >
       View My Work
     </a>
+
     {/* Social Media Icons */}
     <div className="flex space-x-6 mt-6">
       <a
@@ -61,6 +65,11 @@ const Header = () => (
       >
         <FaGithub size={30} />
       </a>
+    </div>
+
+    {/* Add SVG below the social media icons */}
+    <div className="mt-8 w-full max-w-xs sm:max-w-sm">
+      <LaptopMan className="w-full h-auto animate-pulse" />
     </div>
   </header>
 );
