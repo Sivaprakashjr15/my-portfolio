@@ -50,7 +50,7 @@ const Header = () => (
         <FaTwitter size={30} />
       </a>
       <a
-        href="https://linkedin.com/in/sivaprakasam-civashankar"
+        href="https://www.linkedin.com/in/sivaprakasamc/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-black-400 rounded-lg hover:text-blue-500"
