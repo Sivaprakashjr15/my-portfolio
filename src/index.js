@@ -141,7 +141,7 @@ const Projects = ({ projects }) => (
 // Footer Component
 const Footer = () => (
   <footer className="p-4 bg-gray-900 text-gray-400 text-center">
-    <p>© 2024 Sjr15. All rights reserved.</p>
+    <p>© 2024 SivaprakasamC. All rights reserved.</p>
   </footer>
 );
 
