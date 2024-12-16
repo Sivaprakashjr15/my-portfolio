@@ -44,7 +44,7 @@ const InteractiveBackground = () => {
     ));
   };
 
-  return <div className="circle-container">{createCircles(5)}</div>;
+  return <div className="circle-container">{createCircles(0)}</div>;
 };
 
 export default InteractiveBackground;

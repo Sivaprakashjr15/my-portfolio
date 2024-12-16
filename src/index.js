@@ -7,10 +7,12 @@ import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 // Navbar Component
 const Navbar = () => (
-  <nav className="flex justify-between p-5 bg-gray-800 text-white">
-    <div className="text-2xl font-bold"><span className="glow-text">Hola Amigos'</span></div>
-    <div className="flex space-x-4">
-      {['About', 'Education', 'Skills', 'Projects'].map((item) => (
+  <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-3 bg-gray-800 text-white z-50 shadow-lg">
+    <div className="text-xl font-semibold">
+      <span className="glow-text">Hola Amigos'</span>
+    </div>
+    <div className="flex space-x-3 text-sm">
+      {['Home', 'About', 'Education', 'Skills', 'Projects'].map((item) => (
         <a
           key={item}
           href={`#${item.toLowerCase()}`}
@@ -23,9 +25,13 @@ const Navbar = () => (
   </nav>
 );
 
+
+
 // Header Component
 const Header = () => (
-  <header className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white px-4 sm:px-8">
+  <header 
+  id="home"
+  className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white px-4 sm:px-8">
     <h1 className="text-3xl sm:text-5xl font-bold mb-4">
       Hi, I'm <span className="glow-text">SivaprakasamC.</span>
     </h1>
@@ -40,7 +46,7 @@ const Header = () => (
     </a>
 
     {/* Social Media Icons */}
-    <div className="flex space-x-6 mt-6">
+    <div className="flex space-x-3 mt-6">
       <a
         href="https://twitter.com/SivaprakashTwt"
         target="_blank"
@@ -50,7 +56,7 @@ const Header = () => (
         <FaTwitter size={30} />
       </a>
       <a
-        href="https://linkedin.com/in/sivaprakasam-civashankar"
+        href="https://linkedin.com/in/sivaprakasamc/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-black-400 rounded-lg hover:text-blue-500"

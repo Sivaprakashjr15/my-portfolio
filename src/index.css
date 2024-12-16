@@ -16,6 +16,14 @@ body {
 }
 
 /* Navbar */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+  padding-top: 5rem; /* Adds space at the top to account for the fixed Navbar */
+}
+
 nav {
   background-color: #2d3748; /* Tailwind gray-800 */
 }
@@ -285,19 +293,6 @@ form button:hover {
     animation: pulse 4s infinite;
   }
   
-  .typing-text {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1rem;
-  color: #00ff00;
-  position: absolute;
-  bottom: 10%; /* Adjust to align with the laptop screen */
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #00ff00;
-  animation: blink 0.7s step-end infinite;
-}
 
 @keyframes blink {
   from, to {
