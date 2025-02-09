@@ -25,8 +25,6 @@ const Navbar = () => (
   </nav>
 );
 
-
-
 // Header Component
 const Header = () => (
   <header 
@@ -38,12 +36,22 @@ const Header = () => (
     <p className="text-lg sm:text-xl mb-6">
       Web Developer | Bridging Front-End and Back-End
     </p>
-    <a
-      href="#projects"
-      className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-    >
-      View My Work
-    </a>
+    <div className="flex space-x-4">
+      <a
+        href="#projects"
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+      >
+        View My Work
+      </a>
+      <a
+        href="https://github.com/Sivaprakashjr15/resume.git" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+      >
+        View Resume
+      </a>
+    </div>
 
     {/* Social Media Icons */}
     <div className="flex space-x-3 mt-6">
@@ -80,64 +88,6 @@ const Header = () => (
   </header>
 );
 
-// About Component
-const About = () => (
-  <section id="about" className="p-10 bg-gray-100 text-gray-800">
-    <h2 className="text-3xl font-bold mb-4">About Me</h2>
-    <p> - 🎓 Currently exploring Blockchain Development and Full Stack Web Development.</p>
-    <p>- 🛠️ Experienced in building decentralized applications using Solidity and React.</p>
-    <p>- 🌱 Constantly learning and enhancing my knowledge in Web3 technologies.</p>
-    <p>- 🔭 Actively seeking opportunities in entry-level roles where I can contribute and grow in team-oriented environments.</p>
-  </section>
-);
-
-// Education Component
-const Education = () => (
-  <section id="education" className="p-10 bg-gray-100 text-gray-800">
-    <h2 className="text-3xl font-bold mb-4">Education</h2>
-    <p> 🎓 B.E. in Computer Science and Engineering.</p>
-    <p> 📖 Sri Krishna College of Technology</p>
-    <p> 📍 Coimbatore, Tamil Nadu, India</p>
-  </section>
-);
-
-// Skills Component
-const Skills = ({ skills }) => (
-  <section id="skills" className="p-10 bg-gray-200">
-    <h2 className="text-3xl font-bold mb-4">Skills</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      {skills.map((skill) => (
-        <div key={skill} className="p-4 bg-white shadow-md rounded-md text-center">
-          {skill}
-        </div>
-      ))}
-    </div>
-  </section>
-);
-
-// Projects Component
-const Projects = ({ projects }) => (
-  <section id="projects" className="p-10 bg-gray-100 text-gray-800">
-    <h2 className="text-3xl font-bold mb-4">Projects</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {projects.map(({ title, description, link }) => (
-        <div key={title} className="p-4 bg-white shadow-md rounded-md">
-          <h3 className="text-xl font-bold mb-2">{title}</h3>
-          <p>{description}</p>
-          <a
-            href={link}
-            className="text-blue-500 hover:underline mt-2 block"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Project
-          </a>
-        </div>
-      ))}
-    </div>
-  </section>
-);
-
 // Footer Component
 const Footer = () => (
   <footer className="p-4 bg-gray-900 text-gray-400 text-center">
@@ -167,10 +117,6 @@ const App = () => {
       <InteractiveBackground />
       <Navbar />
       <Header />
-      <About />
-      <Education />
-      <Skills skills={skills} />
-      <Projects projects={projects} />
       <Footer />
     </div>
   );
