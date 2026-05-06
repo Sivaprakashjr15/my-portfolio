@@ -61,9 +61,9 @@ const Reveal = ({ children, delay = 0, className = '' }) => {
    Typed text
 ───────────────────────────────────────────── */
 const ROLES = [
-  'Full-Stack Developer',
-  'Blockchain Engineer',
-  'Web3 Builder',
+  'Web Developer',
+  'JavaScript & Python',
+  'Bridging Front-End and Back-End',
   'dApp Architect',
 ];
 
